@@ -1,6 +1,9 @@
 #include <stdio.h>
-
-int main()
+/**
+ * main - entry point
+ * Return: always returns a value
+ */
+int main(void)
 {
 	char a;
 	int  i;
