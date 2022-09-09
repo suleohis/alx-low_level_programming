@@ -19,8 +19,11 @@ for (i = 0; i <= 9; i++)
 				putchar(' ');
 				putchar(k + '0');
 				putchar(l + '0');
-				putchar(',');
-				putchar(' ');
+				if(i != '9' && j != '9' && k != '9' && l != '9')
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
