@@ -7,7 +7,7 @@
 int main(void)
 {
 int chr;
-for(chr = '0'; chr <= '9'; chr++)
+for (chr = '0'; chr <= '9'; chr++)
 {
 putchar(chr);
 putchar(',');
