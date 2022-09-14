@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- *This is use to display
+ * _abs - returns absolute value of a number
+ * @c: parameter
+ * Return: absolute value of a number
  */
 int _abs(int c)
 {
