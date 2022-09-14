@@ -8,19 +8,15 @@
 
 int print_last_digit(int c)
 {
-if (c >= 0)
+if (c > 0 || c == 0)
 {
-int i;
-i = c % 10;
-_putchar(i + '0');
-return (i);
+_putchar (c % 10 + '0');
+return (c % 10);
 }
 else
 {
-int i;
-i = c * -1;
-i = i % 10;
-_putchar(i + '0');
-return (i);
+c = c * -1;
+_putchar (c % 10 + '0');
+return (c % 10);
 }
 }
