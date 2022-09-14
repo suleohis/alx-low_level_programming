@@ -2,8 +2,8 @@
 
 /**
  * add - add two numbers
- * @i: integer i
- * @j: integer j
+ * @i: integer a
+ * @j: integer b
  * Return: (Solution)
  */
 
