@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
- *This is is used to add two number
+ * add - add two numbers
+ * @i: integer i
+ * @j: integer j
+ * Return: (Solution)
  */
 
 int add(int a, int b)
