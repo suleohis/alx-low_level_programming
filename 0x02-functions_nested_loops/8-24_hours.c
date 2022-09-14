@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *This is used to countdown 24 hours
+ * jack_bauer - prints 24 hrs
  */
 void jack_bauer(void)
 {
