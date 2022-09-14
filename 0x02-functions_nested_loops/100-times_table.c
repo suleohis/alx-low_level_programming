@@ -42,7 +42,7 @@ if (mod > 0)
 panctuate(mod);
 }
 }
-/** 
+/**
  *  print_times_table - print the n x i table
  *  @n: integer n
  */
