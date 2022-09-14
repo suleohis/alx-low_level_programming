@@ -1,29 +1,37 @@
 #include "main.h"
-
 /**
  * times_table - print the 9 x i table
  */
-
 void times_table(void)
 {
-int i, j;
-for (i = 0; i < 10; i++)
+int left, right;
+for (left = 0; left < 10; left++)
 {
-	for (j = 0; j < 10; j++)
-	{
-		if (i * j < 10)
-		{
-			_putchar((i * j) +  '0');
-			_putchar(',');
-			_putchar(' ');
-		} else if (i * j > 9 && i * j < 100)
-		{
-			_putchar(((i * j) / 10) + '0');
-			_putchar(((i * j) % 10) + '0');
-			_putchar(',');
-			_putchar(' ');
-		}
-	}
-	_putchar('\n');
+for (right = 0; right < 10; right++)
+{
+if ((left * right) < 10)
+{
+_putchar((left * right) + '0');
+if (right == 9)
+continue;
+_putchar(',');
+_putchar(' ');
+if (left * (right + 1) >= 10)
+continue;
+_putchar(' ');
+continue;
+}
+_putchar(((left * right) / 10) + '0');
+_putchar(((left * right) % 10) + '0');
+if (right == 9)
+continue;
+_putchar(',');
+_putchar(' ');
+}
+_putchar('\n');
 }
 }
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
