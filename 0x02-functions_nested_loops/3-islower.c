@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * This is use to look
- * for lower alphabet
+ * This is use check if a character is  lower alphabet
  */
 int _islower(int c)
 {
