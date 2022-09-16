@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * isdigit - return checks for digit umber
- * @c: This digit for check
+ * _isdigit - a function  to checks for a digit (0 through 9).
  *
- * Return: on success 1
+ * @c: an integer param
+ * Return: always return a value
  */
 
 int _isdigit(int c)
