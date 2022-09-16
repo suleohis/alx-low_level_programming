@@ -1,6 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * main - a program that prints the numbers from 1 to 100
+ *
+ * Return: On success 1.
+ */
 int main(void)
 {
 int i;

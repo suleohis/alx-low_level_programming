@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_triangle - a function that prints a triangle.
+ *
+ * @size: integer
+ */
+
 void print_triangle(int size)
 {
 int i, j;
@@ -17,7 +23,7 @@ for (i = 1; i <= size; i++)
 
 	_putchar('\n');
 }
-if ( size < 1)
+if (size < 1)
 {
 	_putchar('\n');
 }
