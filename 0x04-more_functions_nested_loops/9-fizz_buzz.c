@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - a program that prints the numbers from 1 to 100
+ * main - a program that prints the numbers from 1 to 100.
  *
- * Return: On success 1.
+ * Return: On success 0.
  */
 int main(void)
 {
@@ -28,6 +28,6 @@ for (i = 1; i <= 100; i++)
 	printf("%d ", i);
 	}
 }
-putchar('\n');
+printf('\n');
 return (0);
 }
