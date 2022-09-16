@@ -1,13 +1,30 @@
 #include <stdio.h>
 
+/**
+ *main - a program that finds and prints the largest prime factor.
+ *
+ * Return: On Success 0
+ */
+
 int main(void)
 {
-unsigned long int i, size = 612852475143;
-for (i = 2; i < size; i++)
+long int n;
+n = 612852475143;
+long int div = 2, ans = 0, maxFact;
+while (n != 0)
 {
-if (size % i == 0)
+if (n % div != 0)
+div = div + 1;
+else
 {
-	printf("%ld", i);
+maxFact = n;
+n = n / div;
+if (n == 1)
+{
+printf("%d", maxFact);
+ans = 1;
+break;
+}
 }
 }
 printf("\n");
