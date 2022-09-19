@@ -1,2 +1,7 @@
 *.swp
+*.swk
+*.swl
+*.swm
+*.swn
+*.swo
 _putchar.c
