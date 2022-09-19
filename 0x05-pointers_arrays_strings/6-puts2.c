@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * put2 - a function that reverses a string.
+ * puts2 - a function that reverses a string.
  *
  * @str: char
  */
