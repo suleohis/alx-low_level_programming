@@ -3,17 +3,22 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(void)
+void convert(char s[])
 {
-srand((unsigned int)(time(NULL)));
-int i;
-char pass[12];
+    int num = 0;
+    int n = strlen(s);
 
-for(i = 0; i < 12; i++)
-{
-pass[i] = 33 + rand() % 94;
+    for (int i = 0; i < n; i++)
+
+        num = num * 10 + (s[i] - 48);
+
+    printf("%d", num);
 }
-pass[i] = '\0';
-printf("%s\n",pass);
-printf("\n\n");
+
+int main()
+{
+    char s[] = "123";
+
+    convert(s);
+    return 0;
 }
