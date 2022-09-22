@@ -1,27 +1,26 @@
 #include "main.h"
 
 /**
- * leet - a pointer to the resulting string dest
- * @str: char
+ * leet - encoding string to 1337
+ * @s: string
  *
- * Return: return pointer in str
+ * Return: string
  */
 
-char *leet(char *str)
+char *leet(char *s)
 {
 	int i, j;
 	int a[11] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 	int b[11] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (j = 0; s[j] != '\0'; j++)
 	{
-		for (j = 0; a[i] != '\0'; j++)
+		for (i = 0; a[i] != '\0'; i++)
 		{
-			if (str[i] == a[j])
-			{
-				str[i] = b[j];
-			}
+			if (s[j] == a[i])
+				s[j] = b[i];
 		}
 	}
-	return (str);
+
+	return (s);
 }
