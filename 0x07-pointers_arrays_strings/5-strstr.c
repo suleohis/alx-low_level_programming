@@ -34,7 +34,7 @@ for (i = 0; i < n; i++)
 		}
 	}
 if (count != 0)
-	break;
+	return (haystack + i);
 }
 if (count == 0)
 	return (NULL);
