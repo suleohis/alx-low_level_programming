@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, add;
+	int i, j, add;
 
 	add = 0;
 	if (argc < 2)
@@ -20,13 +20,15 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(*argv[i]))
-			add += atoi(argv[i]);
-		else
+		for (j = 0; *(argv[i] + j); j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (((*(argv[i] + j) < 48) || (*(argv[i] + j) > 57)))
+			{
+				printf("%s\n", "Error");
+				return (1);
+			}
 		}
+		add += atoi(argv[i]);
 	}
 	printf("%d\n", add);
 	return (0);
