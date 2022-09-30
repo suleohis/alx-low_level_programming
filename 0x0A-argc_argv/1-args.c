@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	UNUSED(argv);
+	(void)argv;
 	printf("%d\n", argc);
 	return (0);
 }
