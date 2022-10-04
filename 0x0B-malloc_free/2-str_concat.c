@@ -1,52 +1,73 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * str_concat - function that concatenates two strings.
- * @s1: char
- * @s2: char
+ * str_concat - concatenates to strings, s1 and s2.
+ * @s1: pointer to first string
+ * @s2: pointer to second string
  *
- * Return:  pointer should point to a newly allocated space
- * in memory which contains the contents of s1,
- * followed by the contents of s2, and null terminated
+ * Return: a newly allocated space in memory which contains
+ * the contents of s1, followed by the contents of s2, and null terminated.
  */
-
 char *str_concat(char *s1, char *s2)
 {
 	int i, j, k, m = 0;
-	char *ptr;
+	char *ptc;
 
-	i = 0;
-	j = 0;
-	k = 0;
-
-
-	while (s1[i] != '\0')
+	if (s1 != NULL)
 	{
-		i++;
+		j = _strlen(s1);
 	}
-
-	while (s2[j] != '\0')
+	if (s2 != NULL)
 	{
-		j++;
+		k = _strlen(s2);
 	}
-
-	ptr = malloc(sizeof(char) * (i + j + 1));
-
-	if (ptr == NULL)
+	/*allocate enough space to contain the two*/
+	/*strings plus a null character terminator*/
+	ptc = malloc((j + k + 1) * sizeof(char));
+	if (ptc == NULL)
+	{
 		return (NULL);
-
-	for (k = 0; k < i; k++)
-	{
-		*(ptr + m) =  *(s1 + k);
-		m++;
 	}
 
-	for (k = 0; k < j; k++)
+	if (s1 != NULL)
 	{
-		*(ptr + m) = *(s2 + k);
-		m++;
+		for (i = 0; i < j; i++)
+		{
+			*(ptc + m) = *(s1 + i);
+			m++;
+		}
 	}
-	*(ptr + m) = 0;
+	if (s2 != NULL)
+	{
+		for (i = 0; i < k; i++)
+		{
+			*(ptc + m) = *(s2 + i);
+			m++;
+		}
+	}
+	*(ptc + m) = 0;
 
-	return (ptr);
+	return (ptc);
+}
+
+
+
+/**
+ * _strlen - returns the length of a string
+ * @s: pointer to char type
+ *
+ * Return: an integer length of the argument
+ */
+int _strlen(char *s)
+{
+	int len, shift = 0;
+
+	for (len = 0; *(s + shift);)
+	{
+		len++;
+		shift++;
+	}
+
+	return (len);
 }
