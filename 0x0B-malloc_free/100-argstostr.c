@@ -62,7 +62,7 @@ char *argstostr(int ac, char **av)
 		len += getLength(av[i]);
 	}
 
-	_ptr = ptr = (char *) malloc(len + ac - 1);
+	_ptr = ptr = (char *) malloc(len + ac + 1);
 
 	for (i = 0; i < ac; i++)
 	{
