@@ -4,6 +4,7 @@
 /**
  * get_op_func - selects the correct function to perform the operation
  * @s: the operator passed to the function
+ * Return: int
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -21,5 +22,5 @@ int (*get_op_func(char *s))(int, int)
 	for (i = 0; i < 5; i++)
 		if (strcmp(s, ops[i].op) == 0)
 			return (ops[i].f);
-	return (NULL);	
+	return (NULL);
 }
