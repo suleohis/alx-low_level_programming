@@ -11,6 +11,7 @@ size_t print_dlistint(const dlistint_t *h)
 {
 	dlistint_t *new;
 	int i = 0;
+
 	while (h)
 	{
 		new = h->next;
